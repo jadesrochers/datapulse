@@ -11,14 +11,18 @@
     "main": "index.js",
     "keywords": [],
     "dependencies": {
-        "ramda": "^0.26.1"
+        "ramda": "^0.29.0"
     },
     "scripts": {
-        "test": "jest"
+        "test": "jest",
+        "packagePatch": "npm run test && npm version patch && npm publish && git push -u origin master",
+        "updatePatch": "npm update && npm run test && npm version patch && npm publish && git push -u origin master",
+        "packageMinor": "npm run test && npm version patch && npm publish && git push -u origin master",
+        "CommitandPackage": "./CommitandPackage.sh"
     },
     "devDependencies": {
-        "eslint": "^6.4.0",
-        "eslint-config-problems": "^3.0.1",
-        "jest": "^24.9.0"
+        "eslint": "^8.38.0",
+        "eslint-config-problems": "^7.0.1",
+        "jest": "^29.5.0"
     }
 }
